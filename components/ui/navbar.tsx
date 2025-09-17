@@ -59,7 +59,7 @@ function NavItem({ href, children }: Readonly<NavItemProps>) {
     <li>
       <Link
         href={href}
-        className="flex flex-col items-center gap-1 text-xs hover:text-primary"
+        className="flex flex-col items-center gap-1 text-xs font-medium hover:text-primary"
       >
         {children}
       </Link>
