@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button";
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
-  return (
-    <div>
-      <Button>Click me</Button>
-    </div>
-  );
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/employee");
+  }, [router]);
+  return <div></div>;
 }

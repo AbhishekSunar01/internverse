@@ -1,11 +1,5 @@
+import Navbar from "@/components/ui/navbar";
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
-import "./globals.css";
-
-const manrope = Manrope({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,8 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${manrope.className} antialiased`}>{children}</body>
-    </html>
+    <div className="flex flex-col gap-8 bg-secondary min-h-screen">
+      <Navbar />
+      <div className="px-60">{children}</div>
+    </div>
   );
 }
